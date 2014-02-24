@@ -79,3 +79,21 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Catching the missing routes (pg 35 of Getting Started with Laravel 4)
+|--------------------------------------------------------------------------
+|
+| Instead of displaying a detailed error message to your visitorys, you can
+| catch the "Not Found" exception and display a custom message by defining
+| the following "missing" method for your application.
+|
+| Response object accepts a message as first parameter, and HTTP status
+| code as second param.
+|
+*/
+
+App::missing(function($exception) {
+    return Response::make("Page not found. Bummer :(", 404); //returns response object
+});

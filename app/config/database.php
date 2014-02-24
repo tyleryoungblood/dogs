@@ -26,7 +26,8 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+    'default' => 'sqlite', // make sure app/database/production.sqlite exists!
+	//'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
