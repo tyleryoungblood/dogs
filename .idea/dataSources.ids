@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="a1c5b12d-0630-47cf-b025-866fd8256446">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/app/database/production.sqlite</jdbc-url>
+    <libraries/>
+  </data-source>
+</component>
