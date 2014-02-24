@@ -2,12 +2,12 @@
 
 @section('header')
     @if(isset($breed))
-        {{link_to('/', 'Back to the overview')}}
+        <a href="{{URL::to('/')}}'">Back to the overview</a>
     @endif
 <h2>
-    All @if(isset($breed)) {{$breed->name}} @endif Dogs
+    All @if(isset($breed)) {{$breed}} @endif Dogs
 
-    <a href="{{url('dogs/create')}}" class="btn btn-primary pull-right">
+    <a href="{{URL::to('dogs/create')}}" class="btn btn-primary pull-right">
         Add a new dog
     </a>
 </h2>
@@ -16,7 +16,7 @@
 @section('content')
     @foreach($dogs as $dog)
         <div class="dog">
-            <a href="{{url('dogs/'.$dog->id)}}">
+            <a href="{{URL::to('dogs/'.$dog->id)}}">
                 <strong> {{{$dog->name}}} </strong> - {{{$dog->breed->name}}}
             </a>
         </div>

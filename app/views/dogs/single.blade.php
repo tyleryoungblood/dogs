@@ -1,16 +1,16 @@
 @extends('master')
 
 @section('header')
-    <a href="{{url('/')}}">Back to Overview</a>
+    <a href="{{URL::to('/')}}">Back to Overview</a>
     <h2>
-        {{{$dog->name}}}
+        {{$dog->name}}
     </h2>
 
-    <a href="{{url('dogs/'.$dog->id.'/edit')}}">
+    <a href="{{URL::to('dogs/'.$dog->id.'/edit')}}">
         <span class="glyphicon glyphicon-edit"></span> Edit
     </a>
 
-    <a href="{{ulr('dogs/'.$dog->id.'/delete')}}">
+    <a href="{{URL::to('dogs/'.$dog->id.'/delete')}}">
         <span class="glyphicon glyphicon-trash"></span> Delete
     </a>
 
@@ -22,7 +22,9 @@
     <p>
         @if($dog->breed)
             Breed:
-                {{link_to('dogs/breeds/' . $dog->breed->name, $dog->breed->name)}}
+            <a href="{{URL::to('dogs/breeds/' . $dog->breed->name)}}">
+                {{$dog->breed->name}}
+            </a>
         @endif
     </p>
 @stop

@@ -1,5 +1,7 @@
 <?php
 
+Route::model('dog', 'Dog');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -78,12 +80,7 @@ Route::get('dogs/{id}', function($id) {
         ->with('dog', $dog);
 });
 
-Route::model('dog', 'Dog');
 
-Route::get('dogs/{dog}', function(Dog $dog) {
-    return View::make('dogs.single')
-        ->with('dog', $dog);
-});
 
 
 /*
